@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="border:3px solid red">
         <h1>Computed & Deep/Shallow Watch Test</h1>
         <p>
             {{list}}
@@ -12,12 +12,16 @@
             <button @click="changeName">changeName</button>
         </p>
         <router-link :to="{name:'nested2', params:{a:'aaa', b:222}}">Go Nested2</router-link>
+        <nested2 routeString="route String by Props" :routeNumber="2121213213121"></nested2>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
+import Nested2 from './Nested2';
+
 export default {
+    components: {Nested2},
     name: 'Computed',
     data() {
         return {

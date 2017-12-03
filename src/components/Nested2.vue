@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="border:3px solid blue">
         <h2>Nested2 width routes props</h2>
         <ul>
             <li><h3>routeString: {{routeString}}</h3></li>
